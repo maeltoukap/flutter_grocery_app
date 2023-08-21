@@ -203,8 +203,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   },
                                 );
 
-                                UserModel user =
-                                    UserModel.fromJson(response.data);
+                                UserModel user = UserModel(phone: _phone);
                                 user.token = response.data["data"]["token"];
                                 _userRepository.saveUserData(user);
                                 Get.off(() => const HomeScreen());
@@ -224,8 +223,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return const AlertDialogOperationFailed(
-                                    message:
-                                        "Check all fields",
+                                    message: "Check all fields",
                                   );
                                 });
                           }

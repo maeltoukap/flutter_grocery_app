@@ -70,7 +70,7 @@ class DBService {
   }) async {
     try {
       final request = http.Request('GET', Uri.parse(uri));
-      request.headers.addAll(doAuthHeaders("eyJhbGciOiJQUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMGY3OWEzZC04NmQ4LTQ3NjEtYjc5ZS1hMzEyOWU0OGIwYTUiLCJuYmYiOjE2OTI2NTU0NjN9.U80vFMfhdO2lXVQ6eGmqQSPmuaDshmbY_MvN4LUZTm_UOzJ97PL3XzNK80xy1JDc4VNAVJzS89_ME0qVh8fRu7OlxGa_SMzLrxM2wVPfb1I67YsYVDx5sgFehX6kRY-azSA_DFGZVO0CY0LnxX_2TWYKp5W58sPBMgH9C2q-vYITOT7Wk6fHIBg1zJGIzagayPS1z9Hfa6n5wUkBQMAq-efDQhLI4-5UuY-e_mlx-DgGlA7dLhIUZ9rlCEglKKouIuEdQYB3LSyoAtc138MN4PWbKNdoc-duwxBHTgy4HSzB8Av6oBDqsrijiuBk5XJd9-XCDKh2TVsI2Oxmgb2MEA"));
+      request.headers.addAll(doAuthHeaders(token));
 
       final response = await request.send();
 
